@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('/public/fonts/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'poppins light';
+    src: url('/public/fonts/Poppins-Light.ttf');
+}
+@font-face {
+    font-family: 'poppins bold';
+    src: url('/public/fonts/Poppins-Bold.ttf');
+}
+
+body {
+    font-family: 'poppins' !important;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
