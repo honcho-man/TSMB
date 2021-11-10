@@ -97,7 +97,7 @@ header a {
 }
 
 .section-1 {
-    background-image: url('/public/images/backgrounds/section-1-bg.jpg');
+    background-image: url('../images/backgrounds/section-1-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -108,7 +108,7 @@ header a {
 }
 
 .section-2 {
-    background-image: url('/public/images/backgrounds/section-2-bg.jpg');
+    background-image: url('../images/backgrounds/section-2-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
