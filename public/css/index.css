@@ -11,13 +11,109 @@
     src: url('/public/fonts/Poppins-Bold.ttf');
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body {
-    font-family: 'Poppins','poppins regular', sans-serif !important;
+
+:root {
+    --primary: #ef6d26;
+    --secondary: #F4F4F4;
+    --font-primary: black;
+    --font-secondary: white;
+    --primary-btn-hover: #0000001c;
+    --secondary-btn-hover: #c05013;
+}
+
+.oranged {
+    color: var(--primary);
+}
+
+.primary-btn {
+    background: var(--primary);
+    background-color: var(--primary);
+    border-radius: 5px;
+    border: none !important;
+    color: var(--secondary);
+    box-shadow: 0 0 5px var(--primary-btn-hover);
+}
+
+.primary-btn:hover {
+    background: var(--secondary-btn-hover);
 }
 
 body {
+    font-family: 'Poppins','poppins regular', sans-serif !important;
+    height: 100%;
+    color: var(--font-primary) !important;
+    background: var(--secondary) !important;
+}
+
+header {
+    background: var(--primary);
+    color: var(--font-secondary) !important;
+    box-shadow: 0 0 10px #00000036;
+    height: fit-content;
+}
+
+header a {
+    color: var(--font-secondary) !important;
+}
+
+.menu-btn {
+    color: var(--font-secondary) !important;
+    font-size: larger !important;
+}
+
+.menu-btn span {
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+.lg-nav {
+    height: 100%;
+}
+
+.lg-nav li {
+    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.lg-nav li:hover, .sm-nav li:hover {
+    background: var(--primary-btn-hover);
+}
+
+.active-nav {
+    background: var(--primary-btn-hover);
+}
+
+.side-bar {
+    background: var(--primary) !important;
+}
+
+.sm-nav li {
+    text-align: left;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.section-1 {
+    background-image: url('/public/images/backgrounds/section-1-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section-1>:first-child {
+    background: #00000071 !important;
+}
+
+.section-2 {
+    background-image: url('/public/images/backgrounds/section-2-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section-2>:first-child {
+    background: #00000071 !important;
 }

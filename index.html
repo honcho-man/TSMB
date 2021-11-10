@@ -9,14 +9,194 @@
 			<link rel="icon" type="image/png" href="public/images/icons/favicon.png">
 			<link rel="icon" type="image/x-icon" href="public/images/icons/favicon.ico">
 			<link rel="shortcut icon" href="public/images/icons/favicon.ico" type="image/x-icon">
+			<!--webfonts-->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+			<link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 			<!--stylesheets-->
 			<link rel="stylesheet" href="public/css/index.css">
 			<link rel="stylesheet" href="public/css/animations.css">
+			<!--breakpoint stylesheets-->
+			<link rel="stylesheet" href="public/css/small-screen.css">
+			<link rel="stylesheet" href="public/css/wide-screen.css">
 			<!--bootstrap-->
 			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 		</head>
 		<body>
+			<!--header-->
+			<header class="container-fluid sticky-top">
+				<div class="row">
+					<div class="col-8 col-md-1 col-lg-2">
+						<nav class="navbar">
+							<div class="container px-md-3 px-2">
+							  <a class="navbar-brand" href="/">
+								<img src="public/images/logos/OHE-Logo.png" alt="Oprofinder" width="150">
+							  </a>
+							</div>
+						</nav>
+					</div>
+					<div class="col-4 d-md-none text-end py-2">
+						<button class="btn btn-primary btn-ripple bg-transparent border-0 menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+							<i class="lni lni-menu"></i>
+							<span>menu</span>
+						</button>
+						<div class="offcanvas side-bar offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+							<div class="offcanvas-header">
+								<h5 id="offcanvasRightLabel" class="text-uppercase">navigation.</h5>
+								<button type="button" class="btn-close-white btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body px-0 side-bar-body">
+								<nav class="nav sm-nav text-uppercase text-left flex-column">
+									<li class="nav-item  active-nav">
+										<a class="nav-link d-md-none d-lg-block" href="#home">home</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#masterclass">masterclass</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#viewplan">view plan</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#giftmasterclass">gift masterclass</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#contactus">contact us</a>
+									</li>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-11 col-lg-10 d-none py-0 d-md-block">
+						<nav class="nav lg-nav justify-content-end">
+							<li class="nav-item  active-nav">
+								<a class="nav-link d-md-none d-lg-block" href="#home">home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#masterclass">masterclass</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#viewplan">view plan</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#giftmasterclass">gift masterclass</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#contactus">contact us</a>
+							</li>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<div id="home"></div>
+			<!--body-->
+			<div class="col-12 section-1">
+				<div class="bg-transparent text-secondary px-4 py-5 text-center">
+					<div class="py-5">
+					  <h1 class="display-5 fw-bold pt-5 text-white">Welcome to TSMB 2021</h1>
+					  <div class="col-lg-8 mx-auto pb-5">
+						<p class="fs-5 text-white">
+							Top Skills Masterclass Bundle (TSMB) with access price for just &#8358;1500 Only.
+						</p>
+						<h3 class="text-white">
+							Date: 7th to 11th of December.
+						</h3>
+						<!--
+						<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+						  <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Custom button</button>
+						  <button type="button" class="btn btn-outline-light btn-lg px-4">Secondary</button>
+						</div>
+						-->
+					  </div>
+					</div>
+				  </div>
+			</div>			
+			<div class="main">
+				<div class="container-fluid px-0">
+					<div class="row">
+						<div class="col-12 py-4" id="masterclass">
+							<h2 class="fw-bold py-4 px-0 text-center oranged text-uppercase">masterclass categories</h2>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="h-100 px-2 bg-transparent">
+									  <h4 class="oranged">
+										  <i class="fa fa-tshirt"></i>
+										  Arts and Fashion
+									  </h4>
+									  <div class="container-fluid">
+											<p><span class="fs-5">Topic</span>: The Language of a Trendy Fashion Designer</p>
+											<p><span class="fs-5">Skill Content</span>: </p>
+											<p><span class="fs-5">What you will learn</span>: </p>
+											<ul class="list-unstyled px-4">
+												<li>
+												
+												</li>
+											</ul>
+									  </div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="h-100 px-2 bg-transparent">
+										<h4 class="oranged">
+											<i class="fa fa-tshirt"></i>
+											Music and Entertainment
+										</h4>
+									<div class="container-fluid">
+										<p><span class="fs-5">Topic</span>: The Language of a Trendy Fashion Designer</p>
+										<p><span class="fs-5">Skill Content</span>: </p>
+										<p><span class="fs-5">What you will learn</span>: </p>
+										<ul class="list-unstyled px-4">
+											<li>
+											
+											</li>
+										</ul>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+			<div class="col-12 section-2">
+				<div class="bg-transparent text-secondary px-4 py-5 text-center">
+					<div class="py-0">
+					  <h1 class="display-5 fw-bold oranged text-uppercase">view plan</h1>
+					  <div class="col-lg-8 mx-auto pb-5">
+						<p class="fs-5 text-white text-decoration-line-through opacity-50">
+							Price per class when paying for TSMB &#8358;10,000
+						</p>
+						<p class="fs-5 text-white">
+							Price per bundle when paying for TSMB &#8358;1,500
+						</p>
+						<h3 class="text-white rounded-2 py-2 bg-dark">100% access to all topics</h3>
+						<div class="d-grid gap-2 mt-5  d-sm-flex justify-content-sm-center">
+						  <button type="button" class="primary-btn btn-lg px-4 text-capitalize">register now</button>
+						</div>
+					  </div>
+					</div>
+				  </div>
+			</div>
+			<div class="main">
+				<div class="col-12" id="viewplan">
+					viewplan
+				</div>				
+			</div>
+			<div class="main">
+				<div class="col-12" id="giftmasterclass">
+					giftmasterclass
+				</div>
+			</div>
+			<div class="main">				
+				<div class="col-12" id="contactus">
+					contactus
+				</div>
+			</div>
+			<!--footer-->
+			<footer class="border footer">
+				<div class="container-fluid px-0">
+					footer
+				</div>
+			</footer>
 			<!--jquery & bootstrap js bundles-->
 			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

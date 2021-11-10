@@ -1,0 +1,40 @@
+/*tablets*/
+@media (min-width: 641px) {
+    header,.main,footer {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .navbar-brand {
+        width: 100px !important;
+    }
+
+    .lg-nav li {
+        padding-left: 0px;
+        padding-right: 0px;  
+    }
+}
+/*laptops,tablets*/
+@media (min-width: 961px) {
+    header,.main,footer {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+
+    .lg-nav li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+/*desktop*/
+@media (min-width: 1025px) {
+    header,.main,footer {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+    }
+
+    .lg-nav li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

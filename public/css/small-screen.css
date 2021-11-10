@@ -1,0 +1,6 @@
+@media only screen and (max-width: 768px) {
+    .main,footer {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
