@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'poppins';
+    font-family: 'poppins regular';
     src: url('/public/fonts/Poppins-Regular.ttf');
 }
 @font-face {
@@ -12,7 +12,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
-    font-family: 'poppins','Poppins' !important;
+    font-family: 'Poppins','poppins regular', sans-serif !important;
 }
 
 body {
