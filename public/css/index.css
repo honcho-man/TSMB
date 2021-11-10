@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'poppins regular';
-    src: url('/public/fonts/Poppins-Regular.ttf');
+    src: url('../fonts/Poppins-Regular.ttf');
 }
 @font-face {
     font-family: 'poppins light';
-    src: url('/public/fonts/Poppins-Light.ttf');
+    src: url('../fonts/Poppins-Light.ttf');
 }
 @font-face {
     font-family: 'poppins bold';
-    src: url('/public/fonts/Poppins-Bold.ttf');
+    src: url('../fonts/Poppins-Bold.ttf');
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
