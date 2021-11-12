@@ -21,8 +21,22 @@
     --secondary-btn-hover: #c05013;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: var(--primary);
+}
+
+::selection {
+    color: white;
+    background: var(--primary);
+}
+
 .oranged {
     color: var(--primary);
+}
+
+.blacked {
+    color: #131212d0;
 }
 
 .primary-btn {
@@ -36,6 +50,11 @@
 
 .primary-btn:hover {
     background: var(--secondary-btn-hover);
+}
+
+input:focus {
+    box-shadow: 0 0 2px var(--primary) !important;
+    border: 1px solid var(--primary) !important;
 }
 
 body {
@@ -59,6 +78,10 @@ header a {
 .menu-btn {
     color: var(--font-secondary) !important;
     font-size: larger !important;
+}
+
+.menu-btn:focus {
+    box-shadow: 0 0 0 2px #ffffff67 !important;
 }
 
 .menu-btn span {
@@ -116,4 +139,41 @@ header a {
 
 .section-2>:first-child {
     background: #00000071 !important;
+}
+
+.acct-no,.fa-copy {
+    cursor: pointer;
+}
+
+.fa-copy {
+    font-size: medium;
+}
+
+.copy-text {
+    position: absolute;
+    font-size: 10px;
+    text-transform: lowercase !important;
+    font-weight: lighter;
+    transform: translateY(14px) translateX(-8px);
+}
+
+.browse {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    cursor: pointer;
+    height: 39px;
+    font-size: 15px !important;
+}
+
+.browse-input {
+    height: 39px;
+}
+
+.browse-input:focus {
+    box-shadow: unset !important;
+}
+
+.footer {
+    background: var(--primary);
+    color: var(--secondary);
 }
