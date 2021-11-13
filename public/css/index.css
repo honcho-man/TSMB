@@ -52,6 +52,10 @@
     background: var(--secondary-btn-hover);
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 input:focus {
     box-shadow: 0 0 2px var(--primary) !important;
     border: 1px solid var(--primary) !important;
@@ -176,4 +180,50 @@ header a {
 .footer {
     background: var(--primary);
     color: var(--secondary);
+}
+
+.masterclass ul {
+    list-style: none;
+    z-index: -1;
+}
+
+.masterclass li::before {
+    content: "\02605";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--font-primary); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: 1px; /* Also needed for space (tweak if needed) */
+}
+
+.truncate-btn {
+    padding: 2.5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.truncate-btn:hover {
+    color: var(--secondary) !important;
+}
+
+.toggledText {
+    height: 76px !important;
+    overflow: hidden;
+}
+
+.toggledText.toggle {
+height: auto !important;
+}
+
+.readless-txt,
+.toggledText.toggle~#readmore span.readmore-txt {
+display: none;
+}
+
+.toggledText.toggle~#readmore span.readless-txt {
+    display: block;
 }

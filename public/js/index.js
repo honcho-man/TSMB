@@ -47,3 +47,10 @@ $(function() {
 });
 //require all input
 $('input,textarea').attr('required', true)
+//show all bundle list on click !experimental :)
+function hasParentClass(child) {
+    let parent = child.parentNode.children[2];
+    parent.classList.toggle('toggle');
+    child.children[0].classList.toggle('d-none')
+    child.children[1].classList.toggle('d-block')
+}
