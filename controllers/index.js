@@ -104,7 +104,7 @@ module.exports = {
                             var Mail = template(replacements);
                             var MailgiftEmailData = {
                                 from: db.SMTP_USER,
-                                to: /*'olanrewaju.oe@gmail.com,*/ 'oladipupoladokun@gmail.com',
+                                to: 'olanrewaju.oe@gmail.com',//oladipupoladokun@gmail.com'
                                 subject: 'New TSMB Gift Order',
                                 html: Mail
                             }
@@ -152,7 +152,7 @@ module.exports = {
                     __dirname = './public'
                 var MailpayEmailData = {
                     from: db.SMTP_USER,
-                    to: 'oladipupooladokun@gmail.com',//'akeem.cormier92@ethereal.email,oladipupooladokun@gmail.com',
+                    to: 'olanrewaju.oe@gmail.com',//'akeem.cormier92@ethereal.email,oladipupooladokun@gmail.com',
                     subject: 'New Payment Evidence for TSMB',
                     html: Mail,
                     attachments: [{path: __dirname + '/files/' +payData.filename}]
