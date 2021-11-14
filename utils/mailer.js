@@ -3,7 +3,7 @@ const db = require('../config/index').get(process.env.NODE_ENV);
 var nodemailer = require('nodemailer');
 // create reusable transporter object using the default SMTP transport
 const transporter = nodemailer.createTransport({
-    host: 'smtp.zoho.com',
+    host: 'oprofinder.com',
     port: 465,
     auth: {
         user: db.SMTP_USER,

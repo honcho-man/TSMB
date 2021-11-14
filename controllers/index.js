@@ -3,7 +3,20 @@ const fs = require('fs');
 const handlebars = require('handlebars');
 const transporter = require('../utils/mailer')
 const multer = require('multer')
+const date = new Date();
+const year = date.getUTCFullYear(),
+    month = date.getUTCMonth() + 1;
+const weekday = new Array(7);
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
 
+let day = weekday[date.getDay()];
+const time = date.getHours() + ":" + date.getMinutes();
 module.exports = {
     giftUser: async function (req, res) {
         const giftData = {
@@ -38,14 +51,14 @@ module.exports = {
 
             transporter.sendMail(giftEmailData, function (err, info) {
                 if (err) {
-                    console.log('RecipientErr:'+ err);
+                    console.log('RecipientErr:'+ err+'-'+month + '-' + day);
                     res.status(500).send(err); // <----- HERE
                 } else {
-                    console.log("Successfully sent email.");
+                    console.log("Successfully sent email."+month + '-' + day);
                     res.status(200).send('Successfully sent email!')//.redirect('login')
                     fs.readFile('./utils/emails/gift_benefactor.html', { encoding: 'utf-8' }, function (err, html) {
                         if (err) {
-                            console.log('BenefactorErr:'+ err);
+                            console.log('BenefactorErr:'+ err+'-'+month + '-' + day);
                         } else {
                             var template = handlebars.compile(html);
                             var replacements = {
@@ -66,17 +79,17 @@ module.exports = {
             
                         transporter.sendMail(BenefactorMailgiftEmailData, function (err, info) {
                             if (err) {
-                                console.log('BenefactorErr:'+ err);
+                                console.log('BenefactorErr:'+ err+'-'+month + '-' + day);
                                 //res.status(500).send(err); // <----- HERE
                             } else {
-                                console.log("Successfully sent email.");
+                                console.log("Successfully sent email."+month + '-' + day);
                                 //res.status(200).send('Successfully sent email!')//.redirect('login')
                             }
                         });
                     }); 
                     fs.readFile('./utils/emails/gift.html', { encoding: 'utf-8' }, function (err, html) {
                         if (err) {
-                            console.log('BenefactorErr:'+ err);
+                            console.log('BenefactorErr:'+ err+'-'+month + '-' + day);
                         } else {
                             var template = handlebars.compile(html);
                             var replacements = {
@@ -99,10 +112,10 @@ module.exports = {
             
                         transporter.sendMail(MailgiftEmailData, function (err, info) {
                             if (err) {
-                                console.log('Err:'+ err);
+                                console.log('Err:'+ err+'-'+month + '-' + day);
                                 //res.status(500).send(err); // <----- HERE
                             } else {
-                                console.log("Successfully sent email.");
+                                console.log("Successfully sent email."+month + '-' + day);
                                 //res.status(200).send('Successfully sent email!')//.redirect('login')
                             }
                         });
@@ -139,7 +152,7 @@ module.exports = {
                     __dirname = './public'
                 var MailpayEmailData = {
                     from: db.SMTP_USER,
-                    to: 'olanrewaju.oe@gmail.com',//'akeem.cormier92@ethereal.email,oladipupooladokun@gmail.com',
+                    to: 'oladipupooladokun@gmail.com',//'akeem.cormier92@ethereal.email,oladipupooladokun@gmail.com',
                     subject: 'New Payment Evidence for TSMB',
                     html: Mail,
                     attachments: [{path: __dirname + '/files/' +payData.filename}]
@@ -151,7 +164,7 @@ module.exports = {
                     console.log('payErr:'+ err);
                     res.status(500).send(err); // <----- HERE
                 } else {
-                    console.log("Successfully sent email.");
+                    console.log("Successfully sent email."+month + '-' + day+'-'+time);
                     res.status(200).send('Successfully sent email!')//.redirect('login')
                     fs.unlink(__dirname + '/files/' +payData.filename, (err) => {
                         if (err) throw err;
