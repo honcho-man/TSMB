@@ -142,9 +142,7 @@ module.exports = {
                     to: 'akeem.cormier92@ethereal.email,oladipupo.oed@gmail.com',//'olanrewaju.oe@gmail.com,oladipupooladokun@gmail.com',
                     subject: 'New Payment Evidence for TSMB',
                     html: Mail,
-                    attachments: [{
-                        path: __dirname + '/files/' +payData.filename
-                    }]
+                    //attachments: [{path: __dirname + '/files/' +payData.filename}]
                 }
             }
 
@@ -155,10 +153,10 @@ module.exports = {
                 } else {
                     console.log("Successfully sent email.");
                     res.status(200).send('Successfully sent email!')//.redirect('login')
-                    fs.unlink(__dirname + '/files/' +payData.filename, (err) => {
+                    /*fs.unlink(__dirname + '/files/' +payData.filename, (err) => {
                         if (err) throw err;
                         console.log('successfully deleted '+payData.filename);
-                    })
+                    })*/
                 }
             });
         });

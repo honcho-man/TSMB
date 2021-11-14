@@ -57,6 +57,10 @@
     text-align: justify;
 }
 
+.text-left {
+    text-align: center !important;
+}
+
 a:hover{
     color: white !important;
 }
@@ -387,4 +391,46 @@ display: none;
     border: 3px solid transparent;
     transform: translateX(-5px) translateY(5px);
     z-index: 100;
+}
+
+.plan ul li div {
+    text-align: left !important;
+}
+
+.plan .col-10 {
+    padding-left: 30px !important;
+}
+
+.plan .col-md-6>.container-fluid {
+    border-radius: 10px;
+    background: var(--font-secondary);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 100%;
+}
+
+.plan ul {
+    list-style: none;
+    z-index: -1;
+    text-align: left;
+}
+
+.plan li::before {
+    content: "\2713";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--primary); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: 1px; /* Also needed for space (tweak if needed) */
+}
+
+.img-contn {
+    border: 3px solid;
+    border-radius: 50% !important;
+    height: 100px !important;
+    width: 100px !important;
+    overflow: hidden;
+    background-position: center;
 }
