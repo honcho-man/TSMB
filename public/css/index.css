@@ -49,8 +49,21 @@
     text-decoration: none;
 }
 
+.secondary-btn {
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--font-secondary); !important;
+    color: var(--secondary);
+    box-shadow: 0 0 5px var(--primary-btn-hover);
+    text-decoration: none;
+}
+
 .primary-btn:hover {
     background: var(--secondary-btn-hover) !important;
+}
+.secondary-btn:hover {
+    border: 1px solid var(--primary); !important;
+    background: var(--primary) !important;
 }
 
 .text-justify {
