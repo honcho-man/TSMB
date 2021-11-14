@@ -91,7 +91,7 @@ module.exports = {
                             var Mail = template(replacements);
                             var MailgiftEmailData = {
                                 from: db.SMTP_USER,
-                                to: 'olanrewaju.oe@gmail.com, oladipupoladokun@gmail.com',
+                                to: /*'olanrewaju.oe@gmail.com,*/ 'oladipupoladokun@gmail.com',
                                 subject: 'New TSMB Gift Order',
                                 html: Mail
                             }
@@ -126,7 +126,7 @@ module.exports = {
         //res.status(200).send('okay!');
         fs.readFile('./utils/emails/pay.html', { encoding: 'utf-8' }, function (err, html) {
             if (err) {
-                console.log('payErr:'+ err);
+                console.log('payErr1:'+ err);
                 res.status(500);
             } else {
                 var template = handlebars.compile(html);
@@ -139,7 +139,7 @@ module.exports = {
                     __dirname = './public'
                 var MailpayEmailData = {
                     from: db.SMTP_USER,
-                    to: 'olanrewaju.oe@gmail.com,oladipupooladokun@gmail.com',
+                    to: 'akeem.cormier92@ethereal.email,oladipupo.oed@gmail.com',//'olanrewaju.oe@gmail.com,oladipupooladokun@gmail.com',
                     subject: 'New Payment Evidence for TSMB',
                     html: Mail,
                     attachments: [{
@@ -155,6 +155,10 @@ module.exports = {
                 } else {
                     console.log("Successfully sent email.");
                     res.status(200).send('Successfully sent email!')//.redirect('login')
+                    fs.unlink(__dirname + '/files/' +payData.filename, (err) => {
+                        if (err) throw err;
+                        console.log('successfully deleted '+payData.filename);
+                    })
                 }
             });
         });
