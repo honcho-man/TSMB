@@ -152,7 +152,7 @@ module.exports = {
                     __dirname = './public'
                 var MailpayEmailData = {
                     from: db.SMTP_USER,
-                    to: 'olanrewaju.oe@gmail.com',//'akeem.cormier92@ethereal.email,oladipupooladokun@gmail.com',
+                    to: 'oladipupooladokun@gmail.com',//'olanrewaju.oe@gmail.com',//'akeem.cormier92@ethereal.email,oladipupooladokun@gmail.com',
                     subject: 'New Payment Evidence for TSMB',
                     html: Mail,
                     attachments: [{path: __dirname + '/files/' +payData.filename}]
