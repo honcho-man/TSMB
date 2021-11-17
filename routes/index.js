@@ -44,7 +44,7 @@ const upload = multer({
 router
     /* GET home page. */
     .get('/', (req,res) => {
-        res.render('index', {title: 'TSMB'});
+        res.render('index', {title: 'APPLY: Top Skills Masterclass Bundle'});
     })
     .post('/gift', user.giftUser)
     .post('/api/image', upload.single('myfile'), user.imageUpload)

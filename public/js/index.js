@@ -1,3 +1,12 @@
+var target = 'http://localhost:8500';
+$.ajax({
+    method: 'GET',
+    url: target,
+    dataType: 'json',
+    success: function (response) {
+    console.log(response);
+}
+});
 //add ripple effect to buttons
 $('.lg-nav, .sm-nav').find('li').addClass('btn-ripple');
 $('.primary-btn').addClass('btn-ripple')
